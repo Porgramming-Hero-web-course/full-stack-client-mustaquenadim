@@ -16,7 +16,7 @@ const Books = (props) => {
                     <div className="row">
                         <div className="col">${price}</div>
                         <div className="col">
-                            <Link to={`/destination/${_id}`} className="btn btn-success">Buy Now</Link>
+                            <Link to={`/checkout/${_id}`} className="btn btn-success">Buy Now</Link>
                         </div>
                     </div>
                 </div>

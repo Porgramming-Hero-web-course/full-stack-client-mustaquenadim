@@ -31,15 +31,15 @@ function App() {
                     <Route path='/product'>
                         <Product />
                     </Route>
-                    <Route path='/admin/manage'>
+                    <PrivateRoute path='/admin/manage'>
                         <Manage />
-                    </Route>
-                    <Route path='/admin/add'>
+                    </PrivateRoute>
+                    <PrivateRoute path='/admin/add'>
                         <Add />
-                    </Route>
-                    <Route path='/admin/edit'>
+                    </PrivateRoute>
+                    <PrivateRoute path='/admin/edit'>
                         <Edit />
-                    </Route>
+                    </PrivateRoute>
                     <PrivateRoute path='/checkout/:_id'>
                         <Checkout />
                     </PrivateRoute>

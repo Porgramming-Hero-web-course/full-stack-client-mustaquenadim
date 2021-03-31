@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../App';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
@@ -20,10 +22,10 @@ const Header = () => {
                         <li className="nav-item dropdown">
                             <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</Link>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><Link className="dropdown-item" to="/manage">Manage Books</Link></li>
+                                <li><Link className="dropdown-item" to="/admin/manage">Manage Books</Link></li>
                                 <li><hr className="dropdown-divider"/></li>
-                                <li><Link className="dropdown-item" to="/add">Add Book</Link></li>
-                                <li><Link className="dropdown-item" to="/edit">Edit Book</Link></li>
+                                <li><Link className="dropdown-item" to="/admin/add">Add Book</Link></li>
+                                <li><Link className="dropdown-item" to="/admin/edit">Edit Book</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item">
@@ -31,6 +33,9 @@ const Header = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/login">Login</Link>
+                        </li>
+                        <li className="nav-item">
+                            <h5 className="nav-link">{loggedInUser.displayName}</h5>
                         </li>
                     </ul>
                 </div>
