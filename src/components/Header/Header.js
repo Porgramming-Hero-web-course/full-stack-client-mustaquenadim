@@ -17,10 +17,10 @@ const Header = () => {
                             <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/product">Product</Link>
+                            <Link className="nav-link" to="/order">Order</Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</Link>
+                            <Link className="nav-link dropdown-toggle" to="/admin" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</Link>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><Link className="dropdown-item" to="/admin/manage">Manage Books</Link></li>
                                 <li><hr className="dropdown-divider"/></li>
@@ -31,12 +31,16 @@ const Header = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/checkout">Checkout</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/login">Login</Link>
-                        </li>
-                        <li className="nav-item">
-                            <h5 className="nav-link">{loggedInUser.displayName}</h5>
-                        </li>
+                        {!loggedInUser.photo ? (
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/login">Login</Link>
+                            </li>
+                        ) : (
+                            <li className="nav-item">
+                                <img src={loggedInUser.photo} alt="" />
+                            </li>
+                        )
+                        }
                     </ul>
                 </div>
             </div>

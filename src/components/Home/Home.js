@@ -12,6 +12,14 @@ const Home = () => {
         <div className='container py-3'>
             <div className="row g-4">
                 {
+                    books.length === 0 && 
+                    <div className="d-flex justify-content-center">
+                        <div className="spinner-border" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                }
+                {
                     books.map(book =><Book book={book}></Book>)
                 }
             </div>

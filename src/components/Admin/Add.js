@@ -30,7 +30,7 @@ const Edit = () => {
             },
             body: JSON.stringify(bookData)
         })
-        .then(response => console.log(response))
+        .then(res => console.log(res))
     };
     return (
         <div className='container'>

@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
-import Product from './components/Product/Product';
+import Order from './components/Order/Order';
 import Admin from './components/Admin/Admin';
 import Manage from './components/Admin/Manage';
 import Add from './components/Admin/Add';
@@ -28,9 +28,12 @@ function App() {
                     <Route path='/home'>
                         <Home />
                     </Route>
-                    <Route path='/product'>
-                        <Product />
-                    </Route>
+                    <PrivateRoute path='/order'>
+                        <Order />
+                    </PrivateRoute>
+                    <PrivateRoute path='/admin'>
+                        <Admin />
+                    </PrivateRoute>
                     <PrivateRoute path='/admin/manage'>
                         <Manage />
                     </PrivateRoute>
