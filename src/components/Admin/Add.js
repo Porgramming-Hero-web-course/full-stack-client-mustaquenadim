@@ -22,7 +22,7 @@ const Edit = () => {
             price: data.price,
             imageURL: imageURL
         };
-        const url = `http://localhost:8000/addBook`;
+        const url = `https://apple-shortcake-30747.herokuapp.com/addBook`;
         fetch(url, {
             method: 'POST', 
             headers: {

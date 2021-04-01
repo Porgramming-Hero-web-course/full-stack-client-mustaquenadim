@@ -4,6 +4,22 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Customized CSS */
+/* header style */
+.login-photo {
+  height: 30px;
+  width: 30px;
+}
+/* end header style */
+
+/* book style */
+.book-cover {
+  height: 400px;
+}
+/* end book style */
+
+/* Customized CSS */
+
 .App {
   text-align: center;
 }

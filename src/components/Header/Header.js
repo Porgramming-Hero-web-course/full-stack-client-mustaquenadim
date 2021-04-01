@@ -29,7 +29,7 @@ const Header = () => {
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/checkout">Checkout</Link>
+                            <Link className="nav-link disabled" to="/checkout">Checkout</Link>
                         </li>
                         {!loggedInUser.photo ? (
                             <li className="nav-item">
@@ -37,7 +37,7 @@ const Header = () => {
                             </li>
                         ) : (
                             <li className="nav-item">
-                                <img src={loggedInUser.photo} alt="" />
+                                <img src={loggedInUser.photo} alt="" className="login-photo"/>
                             </li>
                         )
                         }
