@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faEdit, faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 
 const Manage = () => {
     const [books, setBooks] = useState([]);
@@ -18,10 +21,10 @@ const Manage = () => {
             .then((data) => console.log(data));
     };
     return (
-        <div className='container'>
+        <div className='container py-3'>
             <table className='table table-hover'>
                 <thead>
-                    <tr>
+                    <tr className='table-info'>
                         <th scope='col'>Book Name</th>
                         <th scope='col'>Author Name</th>
                         <th scope='col'>Price</th>
@@ -34,15 +37,12 @@ const Manage = () => {
                             <th scope='row'>{book.name}</th>
                             <td>{book.author}</td>
                             <td>${book.price}</td>
-                            <td>
-                                <button className='btn btn-warning'>
-                                    Edit
+                            <td className="d-flex">
+                                <button className='btn btn-warning mx-1'>
+                                    <FontAwesomeIcon icon={faEdit} />
                                 </button>
-                                <button
-                                    className='btn btn-danger'
-                                    onClick={() => handleDeleteBook(book._id)}
-                                >
-                                    Delete
+                                <button className='btn btn-danger mx-1' onClick={() => handleDeleteBook(book._id)}>
+                                    <FontAwesomeIcon icon={faTrashAlt} />
                                 </button>
                             </td>
                         </tr>

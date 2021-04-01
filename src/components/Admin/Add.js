@@ -35,7 +35,7 @@ const Edit = () => {
     return (
         <div className='container'>
             <h3>Add Book</h3>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} className="bg-info p-3 rounded-3">
                 <div className="row">
                     <div className="col">
                         <div className="mb-3">

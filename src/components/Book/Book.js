@@ -5,7 +5,7 @@ const Books = (props) => {
     const { _id, name, author, price, imageURL} = props.book;
     return (
         <div className="col-lg-4">
-            <div className="card h-100 p-3 bg-warning border-0">
+            <div className="card h-100 p-3 bg-warning border-0 shadow">
                 <img src={imageURL} className="card-img-top book-cover" alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title fw-bold text-danger">{name}</h5>

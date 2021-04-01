@@ -33,7 +33,7 @@ const Checkout = () => {
     return (
         <div className='container py-3'>
             <h1>Checkout</h1>
-            <h5>Date: {dateTime}</h5>
+            <h5>Date & Time: {dateTime}</h5>
             {book.length === 0 && (
                 <div className='d-flex justify-content-center'>
                     <div className='spinner-border' role='status'>

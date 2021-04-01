@@ -12,14 +12,14 @@ const Order = () => {
     }, [loggedInUser.email]);
     return (
         <div className='container'>
-            <h2>Orders ({orders.length})</h2>
+            <h1>Orders ({orders.length})</h1>
             <div>
                 <h4>Name: {loggedInUser.username}</h4>
                 <h5>Email: {loggedInUser.email}</h5>
             </div>
             <table className='table table-bordered table-hover'>
                 <thead>
-                    <tr className='text-center'>
+                    <tr className='text-center table-info'>
                         <th scope='col'>Book Name</th>
                         <th scope='col'>Author Name</th>
                         <th scope='col'>Price</th>
