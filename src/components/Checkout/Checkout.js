@@ -18,7 +18,8 @@ const Checkout = () => {
     }, [_id]);
 
     const handleOrder = () => {
-        const newOrder = { ...loggedInUser, ...book, dateTime };
+        const {name, author, price, imageURL} = book;
+        const newOrder = { ...loggedInUser, name, author, price, imageURL, dateTime };
         fetch('https://apple-shortcake-30747.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
@@ -27,7 +28,10 @@ const Checkout = () => {
             body: JSON.stringify(newOrder),
         })
             .then(res => res.json())
-            .then(data => console.log(data));
+            .then(data => {
+                console.log(data);
+                alert('Your order has been placed successfully!')
+            });
     };
 
     return (
@@ -58,6 +62,8 @@ const Checkout = () => {
                 </div>
             </div>
             <button className='btn btn-primary' onClick={handleOrder}>Order</button>
+            <p className="text-danger">* After clicking 'Order' button wait a little bit for alert message.</p>
+            <p className="text-danger">* Don't place any order more than one time.</p>
         </div>
     );
 };
