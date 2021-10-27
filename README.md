@@ -1,21 +1,21 @@
-# Lighthouse
+[Programming Hero](https://web.programming-hero.com/) - Complete Web Development with Jhankar Mahbub `Batch 3`
 
-This is e-commerce website where anyone can buy books or sell books. You can login to your account and can manage books such as add, delete or edit books info. That's all.
+# Assignment 10 : Fullstack Website `Lighthouse`
 
-## 1 `React Router`
+An e-commerce website where anyone can buy and sell books.
 
-In this project, I've used react-router.
+![Screenshot](https://user-images.githubusercontent.com/56265819/139126086-5746310e-05df-41db-8769-6fd30628435c.png)
 
-### 1.1 `React Private Route`
+## Description
 
-I've also used react private route i.e. protected route. It will stop you to visit protected route without sign in.
+*Project description hasn't been updated yet.*
 
-## 2 `React Bootstrap`
+## Technologies
 
-I've used react-bootstrap to make my site responsive for Mobile-UI and Desktop-UI.
+Client: `React` `React Roter` `React Hooks` `Firebase Authentication` `CSS` `Bootstrap`
 
-## 3 `Font Awesome`
+Server: `NodeJS` `ExpressJS` `MongoDB`
 
-You can see a few icons in this site. I've used these icons by the help of font-awesome.
+## Available Links
 
-## `LIVE SITE LINK`: https://fullstack-auth-c5217.web.app/
+[Visit Website](https://fullstack-auth-c5217.web.app/) | [Client Side Repository](https://github.com/mustaquenadim/lighthouse) | [Server Side Repository](https://github.com/mustaquenadim/lighthouse-server)
